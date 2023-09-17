@@ -1,0 +1,6 @@
+-r requirements-test.txt
+django-debug-toolbar
+django-extensions
+pre-commit
+pydotplus
+sphinx
