@@ -17,3 +17,9 @@ repos:
     hooks:
     -   id: pylint
         exclude: .*/migrations/.*|.*/manage\.py
+-   repo: https://github.com/yunojuno/pre-commit-xenon
+    rev: v0.1
+    hooks:
+    - id: xenon
+      args: ["--max-average=A", "--max-modules=C", "--max-absolute=C"]
+      
