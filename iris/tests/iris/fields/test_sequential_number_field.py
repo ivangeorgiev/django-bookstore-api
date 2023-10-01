@@ -14,7 +14,7 @@ class TestSequentialNumberField:
         assert f.key is None
 
     def test_can_specify_composite_key(self):
-        f = SequentialNumberField(["field1", "field2"])
+        f = SequentialNumberField(key=["field1", "field2"])
         assert f.key == ["field1", "field2"]
 
     @pytest.mark.django_db
