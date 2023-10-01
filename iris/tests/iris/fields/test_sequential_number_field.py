@@ -5,9 +5,6 @@ from iris.fields import SequentialNumberField
 
 
 class TestSequentialNumberField:
-    def test_can_create_instance(self):
-        f = SequentialNumberField()
-
     def test_can_specify_field_name_as_key(self):
         f = SequentialNumberField(key="field")
         assert f.key == ["field"]
@@ -26,7 +23,7 @@ class TestSequentialNumberField:
             order=order,
             sequential_number=101,
         )
-        item.refresh_from_db
+        item.refresh_from_db()
         assert item.sequential_number == 101
 
     @pytest.mark.django_db
@@ -34,7 +31,7 @@ class TestSequentialNumberField:
         item = models.OrderItem.objects.create(
             order=order,
         )
-        item.refresh_from_db
+        item.refresh_from_db()
         assert item.sequential_number == 11
 
     @pytest.mark.django_db
@@ -42,7 +39,7 @@ class TestSequentialNumberField:
         item = models.OrderItem.objects.create(
             order=order,
         )
-        item.refresh_from_db
+        item.refresh_from_db()
         expected_sequential_number = (
             order_item.sequential_number + models.OrderItem._meta.get_field("sequential_number").increment
         )

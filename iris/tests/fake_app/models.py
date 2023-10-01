@@ -1,8 +1,11 @@
 from django.db import models
+
 from iris import fields
+
 
 class Order(models.Model):
     id = models.AutoField(primary_key=True)
+
 
 class OrderItem(models.Model):
     id = models.AutoField(primary_key=True)

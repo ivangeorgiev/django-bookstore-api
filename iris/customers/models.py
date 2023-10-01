@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class AddressStatus(models.Model):
     status_id = models.BigAutoField(primary_key=True)
     address_status = models.CharField(max_length=30)
@@ -9,7 +10,8 @@ class AddressStatus(models.Model):
 
     def __str__(self):
         return self.address_status
-    
+
+
 class Country(models.Model):
     country_id = models.BigAutoField(primary_key=True)
     country_name = models.CharField(max_length=200)
@@ -19,7 +21,8 @@ class Country(models.Model):
 
     def __str__(self):
         return self.country_name
-    
+
+
 class Address(models.Model):
     address_id = models.BigAutoField(primary_key=True)
     street_number = models.CharField(max_length=10)
@@ -33,6 +36,7 @@ class Address(models.Model):
     def __str__(self):
         return f"{self.street_number} {self.street_name}, {self.city}, {self.country}"
 
+
 class Customer(models.Model):
     customer_id = models.BigAutoField(primary_key=True)
     first_name = models.CharField(max_length=200)
@@ -45,6 +49,7 @@ class Customer(models.Model):
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
+
 
 class CustomerAddress(models.Model):
     customer_address_id = models.BigAutoField(primary_key=True)

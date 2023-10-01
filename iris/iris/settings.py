@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # 3rd party apps
-    'drf_yasg',
+    "drf_yasg",
     # Local apps
     "iris",
     "books",
@@ -106,13 +106,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-REST_FRAMEWORK = {
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 100
-}
+REST_FRAMEWORK = {"DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination", "PAGE_SIZE": 100}
 
 SWAGGER_SETTINGS = {
-   'DEFAULT_AUTO_SCHEMA_CLASS': 'core.swagger.CustomAutoSchema',
+    "DEFAULT_AUTO_SCHEMA_CLASS": "core.swagger.CustomAutoSchema",
 }
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/

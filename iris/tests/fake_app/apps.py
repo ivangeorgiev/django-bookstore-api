@@ -2,5 +2,5 @@ from django.apps import AppConfig
 
 
 class FakeAppConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
-    name = 'tests.fake_app'
+    default_auto_field = "django.db.models.BigAutoField"
+    name = "tests.fake_app"

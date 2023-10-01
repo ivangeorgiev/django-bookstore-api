@@ -1,3 +1,4 @@
+# pylint: disable=wildcard-import,unused-wildcard-import
 from .settings import *
 
 INSTALLED_APPS.extend(
@@ -9,9 +10,11 @@ INSTALLED_APPS.extend(
     ]
 )
 
-MIDDLEWARE.extend([
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
-])
+MIDDLEWARE.extend(
+    [
+        "debug_toolbar.middleware.DebugToolbarMiddleware",
+    ]
+)
 
 INTERNAL_IPS = [
     "127.0.0.1",

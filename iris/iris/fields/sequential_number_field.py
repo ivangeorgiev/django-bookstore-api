@@ -6,7 +6,7 @@ from django.db.models import Model
 
 
 class SequentialNumberField(models.PositiveIntegerField):
-    def __init__(self, key=None, start_at=1, increment=1, *args, **kwargs):
+    def __init__(self, *args, key=None, start_at=1, increment=1, **kwargs):
         """
         Initializes a SequentialNumberField.
 
